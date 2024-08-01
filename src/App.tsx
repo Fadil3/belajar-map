@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, useMap, Popup, Polygon, FeatureGroup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
-import L from 'leaflet';
 import { useState, useEffect } from 'react';
 import { Feature, Root, dataJSON } from './data';
 
@@ -40,9 +39,9 @@ const MyData = () => {
             <p>{feature.properties.district}</p>
             <p>{feature.properties.province}</p>
             <p>{feature.properties.country}</p>
-            <Button type="primary" onClick={() => {
+            <button type="submit" onClick={() => {
               console.log(feature.properties.pond_uuid_lele);
-            }}>Pond Detail</Button>
+            }}>Pond Detail</button>
           </Popup>
           {/* draw polygon */}
           <Polygon
